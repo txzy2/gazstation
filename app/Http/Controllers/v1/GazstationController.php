@@ -17,7 +17,7 @@ class GazstationController extends Controller
      */
     public function index()
     {
-        \Illuminate\Support\Facades\Log::channel('debuging')->info('gaz works');
+        \Illuminate\Support\Facades\Log::channel('debug')->info('gaz works');
         return parent::sendResponse("GazController is working", 200);
     }
 }
