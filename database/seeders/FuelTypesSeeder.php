@@ -8,9 +8,6 @@ use Illuminate\Support\Str;
 
 class FuelTypesSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         DB::table('fuel_types')->insert([
