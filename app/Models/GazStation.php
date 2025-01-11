@@ -13,9 +13,4 @@ class GazStation extends Model
 
     public $incrementing = false;
     protected $keyType = 'string';
-
-    public function fuelTypes()
-    {
-        return $this->belongsToMany(FuelType::class, 'gaz_station_fuel_types', 'gaz_station_id', 'fuel_type_id');
-    }
 }

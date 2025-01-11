@@ -14,24 +14,28 @@ class GazStationSeeder extends Seeder
         DB::table('gaz_station')->insert([
             [
                 'id' => (string) Str::uuid(),
-                'station_name' => 'Station Alpha',
-                'location' => 'City Center',
-                'contact_info' => 'alpha@example.com',
-                'opening_hours' => '08:00-20:00',
-                'manager_name' => 'John Doe',
+                'terminals' => 5,
+                'is_available' => true,
                 'created_at' => now(),
                 'updated_at' => now(),
+                'location' => '40.712776, -74.005974',
+                'name' => 'Yoshkar-Ola Gaz1',
+                'owner' => 'John Doe',
+                'phone' => '+1234567890',
+                'work_hours' => '09:00 - 18:00'
             ],
             [
                 'id' => (string) Str::uuid(),
-                'station_name' => 'Station Beta',
-                'location' => 'North Side',
-                'contact_info' => 'beta@example.com',
-                'opening_hours' => '09:00-21:00',
-                'manager_name' => 'Jane Smith',
+                'terminals' => 10,
+                'is_available' => false,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],
+                'location' => '34.052235, -118.243683',
+                'name' => 'Yoshkar-Ola Gaz2',
+                'owner' => 'Jane Smith',
+                'phone' => '+0987654321',
+                'work_hours' => '10:00 - 20:00'
+            ]
         ]);
     }
 }
