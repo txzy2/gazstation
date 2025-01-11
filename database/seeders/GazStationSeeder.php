@@ -13,7 +13,7 @@ class GazStationSeeder extends Seeder
     {
         DB::table('gaz_station')->insert([
             [
-                'id' => Str::uuid(),
+                'id' => (string) Str::uuid(),
                 'station_name' => 'Station Alpha',
                 'location' => 'City Center',
                 'contact_info' => 'alpha@example.com',
@@ -23,7 +23,7 @@ class GazStationSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'id' => Str::uuid(),
+                'id' => (string) Str::uuid(),
                 'station_name' => 'Station Beta',
                 'location' => 'North Side',
                 'contact_info' => 'beta@example.com',

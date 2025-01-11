@@ -11,7 +11,6 @@ Route::get('/test', [TestController::class, 'index']);
 Route::group(['prefix' => 'v1', 'middleware' => CheckToken::class], function () {
     Route::group(['prefix' => 'gazstation'], function () {
         Route::get('/info', [GazstationController::class, 'getInfo']);
-        Route::get('/', [GazstationController::class, 'getById']);
 
         // Работа с терминалами
         Route::group(['prefix' => 'terminals'], function () {
